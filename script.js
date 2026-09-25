@@ -1,7 +1,7 @@
 const questions={q1:['Nghe nhạc','Xem phim hoặc chương trình giải trí','Chơi game','Đọc sách hoặc truyện','Chơi thể thao','Đi cà phê hoặc dạo phố','Ngủ và nghỉ ngơi'],q2:['Biển','Núi hoặc nơi cắm trại','Một thành phố mới','Quê nhà','Một khu nghỉ dưỡng','Đi nước ngoài','Ở nhà tận hưởng kỳ nghỉ'],q3:['Nghe nhạc để bình tĩnh','Tâm sự với người thân hoặc bạn bè','Đi dạo một mình','Ngủ một giấc','Chơi thể thao','Xem phim hoặc chơi game','Lập kế hoạch giải quyết vấn đề'],q4:['Gia đình','Bạn thân','Người yêu','Nhóm bạn cùng lớp','Đồng nghiệp','Một mình','Ai cũng được, miễn vui']};
 Object.entries(questions).forEach(([name,options])=>{document.getElementById(name).innerHTML=options.map((option,i)=>`<label class="choice"><input type="radio" name="${name}" value="${i}" ${i===0?'required':''}><span>${option}</span></label>`).join('')});
 // Dán URL Web app Google Apps Script (kết thúc bằng /exec) vào đây.
-const MAIL_WEB_APP_URL = 'DAN_URL_WEB_APP_VAO_DAY';
+const MAIL_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycby5lwdbQcGNXYvEbW7S_770HHmufAlMDlyKSaxcDUlYFiYWzea9hCISAaeHmNnILagW/exec';
 const form=document.getElementById('form'),audio=document.getElementById('bgm'),toggle=document.getElementById('musicToggle');
 form.addEventListener('submit',async e=>{
   e.preventDefault();if(!form.reportValidity())return;
